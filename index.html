@@ -2,25 +2,44 @@
 <html>
     <head>
         <title>201812749 이현원</title>
+        <script src="jquery.js"></script>
+        <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
         <style>
+
             #main{
-                width : 500px;
+                width : 800px;
                 margin : 0 auto;
+                overflow : hidden;
+            }
+
+            #img{
+                width : 160px;
+                height : 200px;
+            }
+
+            .one{
+                float : left;
+                
+            }
+            @media screen and (max-width: 767px) {
+                body { width: auto }
             }
         </style>
     </head>
     <body>
-        <table>
+        <h1>이현원의 홈페이지</h1>
+        <table style="float:right">
             <tr>
-                <td>이현원의 홈페이지</td>
                 <td>HOME</td>
                 <td>PAGE#2</td>
                 <td>PAGE#3</td>
             </tr>
         </table>
+        <br>
         <hr>
-        <div id="main">
-            <img src="./images/1.jpg" alt="my image">
+        <div id="main" style="overflow:hidden">
+            <img id="img"class="one" src="./images/1.jpg" alt="my image">
+            <div class="one">학번 : 201812749<br>-재학중</div>
         </div>
     </body>
 </html>
