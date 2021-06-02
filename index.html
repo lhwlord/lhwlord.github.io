@@ -5,41 +5,149 @@
         <script src="jquery.js"></script>
         <meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1">
         <style>
+            html{
+                overflow-y:scroll;
+            }
 
-            #main{
-                width : 800px;
+            #my1{
+                width : 600px;
                 margin : 0 auto;
                 overflow : hidden;
+                position : relative;
+                min-height:800px;
+            }
+
+            #my2{
+                min-height:800px;
+                background-image: url('./images/classic.jpg');
+                background-size: 100%;
+            }
+
+            #my3{
+                min-height:800px;
             }
 
             #img{
                 width : 160px;
                 height : 200px;
+                float:left;
             }
 
-            .one{
+            #cardDes{
                 float : left;
+                font-family:'Times New Roman', Times, serif;
+                font-size : 1.2em;
                 
             }
+
+            #card{
+                border-style:solid;
+                width:500px;
+                height:200px;
+                padding: 30px;
+            }
+
             @media screen and (max-width: 767px) {
-                body { width: auto }
+                body { width: auto; }
+            }
+
+            .menuButton:link { color: black; text-decoration: none;}
+            .menuButton:visited { color: black; text-decoration: none;}
+            .menuButton:hover { color: grey; text-decoration: none;}
+            .menuButton{
+                font-weight : bold;
+                font-size : 25px;
+                padding:0px 25px;
             }
         </style>
+        <script>
+            $(document).ready(function () {
+                $('#b1').click(function () {
+                    $('#my1').css('display', '');
+                    $('#my2').css('display', 'none');
+                    $('#my3').css('display', 'none');
+                });
+
+                $('#b2').click(function () {
+                    $('#my1').css('display', 'none');
+                    $('#my2').css('display', '');
+                    $('#my3').css('display', 'none');
+                });
+
+                $('#b3').click(function () {
+                    $('#my1').css('display', 'none');
+                    $('#my2').css('display', 'none');
+                    $('#my3').css('display', '');
+                });
+            });
+        </script>
     </head>
-    <body>
-        <h1>이현원의 홈페이지</h1>
+    <body style="overflow:hidden">
+        <header>
+        <h1 style="float:left">이현원의 홈페이지</h1>
+        <br><br>
         <table style="float:right">
             <tr>
-                <td>HOME</td>
-                <td>PAGE#2</td>
-                <td>PAGE#3</td>
+                <td id="b1"><a href="#" class="menuButton">HOME</a></td>
+                <td id="b2"><a href="#" class="menuButton">PAGE#2</a></td>
+                <td id="b3"><a href="#" class="menuButton">PAGE#3</a></td>
             </tr>
         </table>
-        <br>
+        
+
+        </header>
+        <br><br>
         <hr>
-        <div id="main" style="overflow:hidden">
-            <img id="img"class="one" src="./images/1.jpg" alt="my image">
-            <div class="one">학번 : 201812749<br>-재학중</div>
+        <div id="my1" style="overflow:hidden">
+            <div id="card">
+                <img id="img"class="one" src="./images/1.jpg" alt="my image">
+                <div id="cardDes">
+                    성명 : 이현원<br>
+                    신분 : 대학생<br>
+                    학번 : 201812749<br>
+                    학과 : 컴퓨터공학과<br>
+                    상태 : 재학중<br>
+                    소재지 : 강원도 춘천시<br>
+                    <hr>
+                </div>
+            </div>
+            <p>안녕하십니까, 이현원 입니다.<br>
+                홈페이지 제작을 하였습니다.<br>
+                자기소개를 하겠습니다.<br>
+                저는 대학생 입니다.<br>
+                강원대학교에 학부과정으로 재학 중에 있습니다.<br>
+                현재 2학년입니다.<br>
+                컴퓨터공학과입니다. 프로그래밍 재미있습니다.<br>
+                이상입니다.<br>
+                
+            </p>
         </div>
+
+        
+
+        <div id="my2" style="display:none;">
+            
+                <div style="width:800px;background-color: rgba(255, 255, 255, 0.8);">
+                 <h2>G선상의 아리아</h2>
+                   <audio loop controls source src="G_string.mp3" type="audio/mp3"></audio>
+                    <hr>
+                    <p><a href="https://ko.wikipedia.org/wiki/G%EC%84%A0%EC%83%81%EC%9D%98_%EC%95%84%EB%A6%AC%EC%95%84">출처 : 위키백과</a></p>
+                    <p>《G선상의 아리아》(Air on G)는 요한 제바스티안 바흐 (Johann Sebastian Bach, 1685~1750)의 관현악 모음곡 3번 라장조의 아리아를 아우구스트 빌헬미 (August Daniel Ferdinand Victor Wilhelmj, 1845~1908)가 편곡한 것이다. 아리아는 통상 느리고 자유롭게 연주되며, 화음과 선율이 어우러진다.</p>
+                    <h3>역사</h3>
+                     <hr>
+                    <p>원래의 악곡은 바흐의 《관현악 모음곡 3번 라 장조》, BWV 1068의 일부인데, 이 곡은 바흐의 후원자인 안할트 쾨텐의 레오폴트 왕자를 위해서 1717년에서 1723년 사이에 씌여진 곡이다.<br><br>
+
+                    'G선상의 아리아'라는 이름은 19세기 후반에 바이올린 연주자 아우구스트 빌헬미가 이 곡을 바이올린과 피아노를 위한 용도로 편곡한 것에서 비롯되었다. 원곡의 라 장조에서 다 장조로 조를 바꾸면서, 빌헬미는 바이올린의 네 현 중 가장 낮은 음역대를 낼 수 있는 G선 하나로만 연주할 수 있도록 하였다.<br><br>
+                    
+                    이 곡은 20세기에 들어오면서 오케스트라의 앵콜곡이나 대중적인 명곡으로서 곡 중에서 떨어져 나와 연주되게 되었고, 단독의 소품으로 이용되어 드라마나 영화음악 등 영상의 배경음악으로도 자주 사용되었다.</p>
+                </div>
+            
+        </div>
+        <div id="my3" style="display:none">
+            <p>임시. 잘되는지 확인용.3</p>
+        </div>
+        <footer>
+            <div style="position:relative; bottom:0px; width:600px; margin:0 auto;">Copyright @ 2021. 이현원(HOME에 있는 그사람) 모든 권리 가짐</div>
+        </footer>
     </body>
 </html>
